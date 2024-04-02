@@ -65,7 +65,7 @@
         document.getElementById('task_form').addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Get all the input values
+        
             let  firstName = document.getElementById('firstName').value;
             let  lastName = document.getElementById('lastName').value;
             let  managerFirstName = document.getElementById('managerFirstName').value;
@@ -76,7 +76,7 @@
             let  notes = document.getElementById('notes').value;
             let  instructions = document.getElementById('instructions').value;
 
-            // Display submitted data below the form
+
             let  submittedData = document.getElementById('submittedData');
             submittedData.innerHTML = `
                 <h2>Submitted Data</h2>

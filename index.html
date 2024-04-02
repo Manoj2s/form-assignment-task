@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 id="heading">Task assignment form</h1>
+    <form id="task_form">
+        <div class="inputfield">
+            <h3 class="title">Employee Name</h3>
+            <div class="naming_input">
+                <input type="text" placeholder="" id="firstName">     
+                <input type="text" placeholder="" id="lastName">
+            </div>
+            <div class="naming_para">
+                 <p>First name</p>
+                 <p>Last name</p>
+            </div>
+
+            <h3 class="title">Manager Name</h3>
+            <div class="naming_input">
+                <input type="text" placeholder="" id="managerFirstName">     
+                <input type="text" placeholder="" id="managerLastName">
+            </div>
+            <div class="naming_para">
+                 <p>First name</p>
+                 <p>Last name</p>
+            </div>
+
+            <div class="task">
+              <h3>Task</h3>
+              <h3>Task ID</h3>
+            </div>
+            <div class="naming_input">
+                <input type="text" placeholder="" id="taskName">
+                <input type="text" placeholder="EX:3" id="taskId">
+            </div>
+
+            <h3 class="title">Status</h3>
+            <div class="radioBTN">
+                <input type="radio" name="Status" id="NotStarted" value="Not Started">
+                <label for="NotStarted">Not Started</label><br>
+                <input type="radio" name="Status" id="InProgress" value="In Progress">
+                <label for="InProgress">In Progress</label><br>
+                <input type="radio" name="Status" id="Done" value="Done">
+                <label for="Done">Done</label><br>
+                <input type="radio" name="Status" id="AwaitingFeedback" value="Awaiting Feedback">
+                <label for="AwaitingFeedback">Awaiting Feedback</label>
+            </div>
+
+            <h3 class="title">Additional Notes</h3>
+            <textarea class="textarea" cols="90" rows="10" id="notes" placeholder="Type Here..."></textarea>
+            <h3  class="title"> Instruction</h3>
+            <textarea class="textarea"  id="instructions" cols="90" rows="5" itemid="Instructions"></textarea>
+            <hr>
+            <button type="submit" class="subBtn">Submit </button>
+        </div>
+    </form>
+    <div id="submittedData"></div>
+    <script>
+        document.getElementById('task_form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get all the input values
+            let  firstName = document.getElementById('firstName').value;
+            let  lastName = document.getElementById('lastName').value;
+            let  managerFirstName = document.getElementById('managerFirstName').value;
+            let  managerLastName = document.getElementById('managerLastName').value;
+            let  taskName = document.getElementById('taskName').value;
+            let  taskId = document.getElementById('taskId').value;
+            let  status = document.querySelector('input[name="Status"]:checked').value;
+            let  notes = document.getElementById('notes').value;
+            let  instructions = document.getElementById('instructions').value;
+
+            // Display submitted data below the form
+            let  submittedData = document.getElementById('submittedData');
+            submittedData.innerHTML = `
+                <h2>Submitted Data</h2>
+                <p><strong>Employee Name:</strong> ${firstName} ${lastName}</p>
+                <p><strong>Manager Name:</strong> ${managerFirstName} ${managerLastName}</p>
+                <p><strong>Task ID:</strong> ${taskId}</p>
+                <p><strong>Status:</strong> ${status}</p>
+                <p><strong>Additional Notes:</strong> ${notes}</p>
+                <p><strong>Instructions:</strong> ${instructions}</p>
+            `;
+        });
+    </script>
+</body>
+</html>

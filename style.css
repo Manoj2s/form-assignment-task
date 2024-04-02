@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#heading{
+    border-bottom: 2px solid grey;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.title{
+    margin: 3rem 0 1rem 3rem;
+}
+.naming_input input{
+    margin: 20px 0 10px 3rem ;
+    width:300px;
+    padding: 12px;
+}
+.naming_para{
+    display: flex;
+    
+}
+.naming_para p{
+    margin-left: 3rem ;
+    margin-right: 13.7rem;
+}
+.task{
+    display: flex;
+    
+}
+.task h3{
+    margin-left: 3rem ;
+    margin-right: 16rem;
+    margin-top: 4rem;
+}
+.radioBTN{
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+.radioBTN input{
+    margin-top: 16px;
+}
+.textarea{
+    margin-left: 3rem;
+}
+hr{
+    margin: 2rem;
+}
+
+.subBtn{
+    background-color: rgb(48, 235, 48);
+    padding: 20px;
+    width: 150px;
+    border: none;
+    color: #ffffff;
+    margin-left: 30rem;
+    
+    margin-bottom: 5rem;
+    font-size: 25px;
+    border-radius: 7px;
+}
